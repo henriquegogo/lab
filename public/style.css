@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "M PLUS Code Latin", sans-serif;
+  color: #444;
+}
+body {
+  margin: 0 auto;
+  max-width: 800px;
+}
+a {
+  text-decoration: none;
+  color: #444;
+  cursor: pointer;
+}
+a:hover { color: #000; }
+button {
+  font-family: "M PLUS Code Latin", sans-serif;
+  cursor: pointer;
+  border: 1px solid #888;
+}
+input[type], select {
+  padding: 10px 20px;
+  font-size: 0.9em;
+  background-color: #fff;
+  border: 1px solid #888;
+}
+button {
+  padding: 10px 20px;
+  font-size: 0.9em;
+}
+
+header {
+  display: flex;
+  padding: 0 10px;
+  line-height: 60px;
+}
+header h1 { margin: 0; }
+header nav { margin-left: auto; }
+header nav a {
+  padding: 10px 20px;
+  line-height: 3em;
+}
+header nav a:hover { background-color: #eee; }
+
+main { padding: 0 10px; }
+main > article {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px dashed #ccc;
+}
+main > article {
+  padding: 20px 0;
+  border-bottom: 1px dashed #ccc;
+}
+main > article > footer { margin-left: auto; }
+main > article > footer a {
+  padding: 0 10px;
+  font-size: 0.8em;
+}
+main > article > footer a:first-of-type { border-left: none; }
+
+main > form {
+  display: flex;
+  padding: 20px 0;
+}
+main > form input[name="content"] { flex: 5; }
+main > form button[type="submit"] { flex: 1; }
+
+iframe[name="modal"] {
+  width: 100%;
+  border: none;
+}
+dialog {
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+}
+dialog::backdrop { background-color: rgba(0, 0, 0, 0.5); }
