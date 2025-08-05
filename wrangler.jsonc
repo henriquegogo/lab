@@ -5,6 +5,7 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "lab",
+	"main": "./src/index.js",
 	"compatibility_date": "2025-08-03",
 	"assets": {
 		"directory": "./public"
