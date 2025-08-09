@@ -29,6 +29,8 @@ export default class {
     req.query = url.searchParams;
     req.path = url.pathname;
     req.params = {};
+    req.form = req.method === "POST" ? await req.formData() : new FormData();
+    const req_method = req.form.get("_method") || req.method;
 
     const res = {
       send(body, headers = new Headers(), status = 200) {
@@ -55,7 +57,7 @@ export default class {
     }
 
     for (const route of this.routes) {
-      if (route.method !== req.method) continue;
+      if (route.method !== req_method) continue;
       const method = req.path.match(route.regex);
       if (method) {
         route.keys.forEach((k, i) =>

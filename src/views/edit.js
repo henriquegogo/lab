@@ -1,7 +1,10 @@
-<link rel="stylesheet" href="style.css" />
+export default ({ id }) => `
+<link rel="stylesheet" href="/style.css" />
 
-<h3>Edit form</h3>
+<h3>Edit item ${id}</h3>
 <form method="POST" action="/" target="_top">
+  <input type="hidden" name="_method" value="PUT" />
+  <input type="hidden" name="id" value="${id}" />
   <input type="text" name="content" autofocus />
   <select>
     <option value="1">First post</option>
@@ -16,3 +19,4 @@
 <p>This is an example of edit form</p>
 <p>It's suppose to be opened in a modal</p>
 <p>It's suppose to be opened in a modal</p>
+`
